@@ -1,3 +1,9 @@
 export interface IComputer {
-  name: string;
+  make: string;
+  model: string;
+  memory: string;
+  bits: string;
+  image: string;
+  yearsInProduction: string;
+  description: string;
 }

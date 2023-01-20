@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="m-2">
+    <h2>Featured Computer</h2>
+  </div>
+  <div class="card-header">
+    {{computer?.make + " " + computer?.model}}
+  </div>
+
+
+  <div *ngIf="computer" class="card-body">
+    <div class="row m-1">
+      <div class="col-md-4">
+        <img class='center-block img-responsive'
+             [style.width.px]='200'
+             [style.margin.px]='2'
+             [src]='computer.image'>
+      </div>
+      <div class="col-md-6">
+        <div class="col-md-12 row">
+          <div class="col-md-4">Bit type:</div>
+          <div class="col-md-4">{{computer.bits}}</div>
+        </div>
+        <div class="col-md-12 row">
+          <div class="col-md-4">Memory:</div>
+          <div class="col-md-4">{{computer.memory}}</div>
+        </div>
+        <div class="col-md-12 row">
+          <div class="col-md-4">Years in production:</div>
+          <div class="col-md-4">{{computer.yearsInProduction}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="row border-top m-1">
+      {{computer?.description}}
+    </div>
+  </div>
+</div>

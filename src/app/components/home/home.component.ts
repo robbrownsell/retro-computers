@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ComputersService} from "../../services/computers.service";
 import {IComputer} from "../../domain/IComputer";
 
@@ -11,14 +11,17 @@ import {IComputer} from "../../domain/IComputer";
 export class HomeComponent {
 
   private computerService;
-  featuredComputer: IComputer = {"name": ""};
 
   constructor(computerService: ComputersService) {
     this.computerService = computerService;
   }
 
-  ngOnInit(): void {
-    this.featuredComputer = this.computerService.getComputers()[0]
+  getComputers(): IComputer[] {
+    return this.computerService.getComputers()
   }
+
+  // ngOnInit(): void {
+  //   this.featuredComputer = this.computerService.getComputers()[0]
+  // }
 
 }
