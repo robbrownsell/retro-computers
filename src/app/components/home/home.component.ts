@@ -10,18 +10,5 @@ import {IComputer} from "../../domain/IComputer";
 })
 export class HomeComponent {
 
-  private computerService;
-
-  constructor(computerService: ComputersService) {
-    this.computerService = computerService;
-  }
-
-  getComputers(): IComputer[] {
-    return this.computerService.getComputers()
-  }
-
-  // ngOnInit(): void {
-  //   this.featuredComputer = this.computerService.getComputers()[0]
-  // }
 
 }

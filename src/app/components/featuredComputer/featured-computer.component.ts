@@ -16,9 +16,16 @@ export class FeaturedComputerComponent {
   }
 
   ngOnInit(): void {
-    const computers = this.computerService.getComputers()
-    const randomIndex = this.randomIntFromInterval(0, computers.length-1)
-    this.computer = computers[randomIndex]
+    this.computerService.getComputers().subscribe(
+      {
+        next: computers => {
+          const randomIndex = this.randomIntFromInterval(0, computers.length-1)
+          this.computer = computers[randomIndex]
+        },
+        error: err => console.log(err)
+      }
+    )
+
   }
 
   private randomIntFromInterval(min: number, max: number) { // min and max included
