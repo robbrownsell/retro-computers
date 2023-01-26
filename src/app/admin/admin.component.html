@@ -1,6 +1,46 @@
 <rc-header [activeComponent]="'admin'"></rc-header>
 <div class="card">
   <div class="m-2">
-    <h2>Admin</h2>
+  </div>
+  <div class="container w-50">
+    <form class="card">
+      <h3 class="m-2">Add new Computer</h3>
+      <div class="row">
+        <div class="form-group m-2 col-md-3">
+          <label for="make">Make</label><br/>
+          <input id="make" type="text" [formControl]="makeInput" placeholder="make">
+        </div>
+        <div class="form-group m-2 col-md-3">
+          <label for="model">Model</label><br/>
+          <input id="model" type="text" placeholder="model">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group m-2 col-md-3">
+          <label for="bits">Bits</label><br/>
+          <input id="bits" type="text" placeholder="bits">
+        </div>
+        <div class="form-group m-2 col-md-3">
+          <label for="memory">Memory</label><br/>
+          <input id="memory" type="text" placeholder="memory">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group m-2 col-md-2">
+          <label for="yearsProd">Years in Production</label><br/>
+          <input id="yearsProd" type="text" placeholder="years in production">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group m-2">
+          <label for="yearsProd">Description</label><br/>
+          <textarea placeholder="please enter a description" id="description" class="w-75"></textarea>
+        </div>
+      </div>
+      <div class="form-group m-2">
+        <button type="submit" class="btn btn-primary" (click)="submitComputer()">submit</button>
+      </div>
+    </form>
+
   </div>
 </div>

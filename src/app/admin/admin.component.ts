@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'rc-admin',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+
+  makeInput = new FormControl('');
+
+  submitComputer(): void {
+    console.log(this.makeInput.value);
+  }
 
 }
