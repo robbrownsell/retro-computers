@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {Component} from '@angular/core';
+import {IComputer} from "../domain/IComputer";
 
 @Component({
   selector: 'rc-admin',
@@ -8,10 +8,21 @@ import {FormControl} from "@angular/forms";
 })
 export class AdminComponent {
 
-  makeInput = new FormControl('');
+  newComputer: IComputer = new class implements IComputer {
+    bits: string = "";
+    description: string = "";
+    image: string = "";
+    make: string = "";
+    memory: string = "";
+    model: string = "";
+    yearsInProduction: string = "";
+  }
 
-  submitComputer(): void {
-    console.log(this.makeInput.value);
+  submitted = false;
+
+  onSubmit(): void {
+    this.submitted = true;
+    console.log(this.newComputer?.make);
   }
 
 }
