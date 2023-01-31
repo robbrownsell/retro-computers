@@ -1,20 +1,19 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-  <div class="m-2">
-    <div class="col-md-10">
-      <h1 class="navbar-brand">Retro Computer Museum</h1>
-    </div>
-  </div>
+  <h1 class="navbar-brand">Retro Computer Museum</h1>
 </nav>
-
-
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+  <a activeTab [activeComponent]="activeComponent" [currentTab]="'home'" href="/home">Home</a>
+  <a activeTab [activeComponent]="activeComponent" [currentTab]="'admin'" href="/admin">Admin</a>
+  <a activeTab [activeComponent]="activeComponent" [currentTab]="'about'" href="#about">About</a>
   <div>
-      <button class='btn btn-primary' (click)="performSearch()">search</button>
+    <form #searchForm="ngForm">
+      <button class='btn btn-primary' [disabled]="!searchForm.form.valid" (click)="performSearch()">search</button>
       <input type="text" placeholder="Search.." [(ngModel)]="searchTerm"
-             required minlength="2" (keydown.enter)="performSearch()" >
+             required minlength="2" (keydown.enter)="performSearch()" name="searchBox" #searchBox="ngModel">
+    </form>
+    <div>
+
+    </div>
   </div>
 </div>
 

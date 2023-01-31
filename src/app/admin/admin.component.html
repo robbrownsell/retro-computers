@@ -1,0 +1,84 @@
+<rc-header [activeComponent]="'admin'"></rc-header>
+<div class="card">
+  <div class="m-2">
+  </div>
+  <div class="container w-75" [hidden]="submitted">
+    <form class="card p-4" #newComputerForm="ngForm" (ngSubmit)="onSubmit()">
+      <h3 class="m-2">Add New Computer</h3>
+
+      <div class="form-group">
+        <label for="make">Make</label><br/>
+        <input id="make" type="text" class="form-control" placeholder="make"
+               required minlength="4" [(ngModel)]="newComputer.make" name="make" #make="ngModel">
+        <div [hidden]="make.valid || make.pristine"
+             class="alert alert-danger">
+          make must be at least 4 characters
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="model">Model</label><br/>
+        <input id="model" type="text" class="form-control" placeholder="model"
+               required minlength="3" [(ngModel)]="newComputer.model" name="model" #model="ngModel">
+        <div [hidden]="model.valid || model.pristine"
+             class="alert alert-danger">
+          model must be at least 3 characters
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="bits">Bits</label><br/>
+        <input id="bits" type="text" class="form-control" placeholder="bits"
+               required minlength="1" [(ngModel)]="newComputer.bits" name="bits" #bits="ngModel">
+        <div [hidden]="bits.valid || bits.pristine"
+             class="alert alert-danger">
+          bits must be at least 1 character
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="memory">Memory</label><br/>
+        <input id="memory" type="text" class="form-control" placeholder="memory"
+               required minlength="2" [(ngModel)]="newComputer.memory" name="memory" #memory="ngModel">
+        <div [hidden]="memory.valid || memory.pristine"
+             class="alert alert-danger">
+          memory must be at least 2 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="yearsProd">Years in Production</label><br/>
+        <input id="yearsProd" type="text" class="form-control"
+               placeholder="years in production" required minlength="9" [(ngModel)]="newComputer.yearsInProduction"
+               #yearsProd="ngModel"
+               name="yearsInProduction">
+        <div [hidden]="yearsProd.valid || yearsProd.pristine"
+             class="alert alert-danger">
+          Enter format YYYY-YYYY
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="yearsProd">Description</label><br/>
+        <textarea placeholder="please enter a description" id="description"
+                  class="form-control"
+                  required minlength="9" #description="ngModel" [(ngModel)]="newComputer.description" name="description"></textarea>
+        <div [hidden]="description.valid || description.pristine"
+             class="alert alert-danger">
+          Please enter a valid description
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!newComputerForm.form.valid">submit</button>
+      </div>
+
+    </form>
+
+
+
+  </div>
+  <div class="container p-4 w-50" [hidden] = "!submitted">
+    <h3>Thanks for adding a new computer!</h3>
+  </div>
+</div>
