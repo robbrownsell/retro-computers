@@ -1,0 +1,56 @@
+[
+  {
+    "make": "Atari",
+    "model": "ST",
+    "memory": "512k - 4096k",
+    "bits": "16",
+    "image": "assets/images/atari520st.png",
+    "yearsInProduction": "1985 - 1993",
+    "description": "The Atari ST line of computers was launched in 1985 by Atari Corporation, beginning with the Atari 520ST. It included an 8 MHz Motorola 68000 CPU and 512 KB of RAM. Later models included a built-in 3.5\" floppy disk drive, RF modulator and an internal power supply. \"ST\" stands for Sixteen-Thirtytwo, because of the 68000 CPU's 16-bit external data bus and 32-bit internal data bus."
+  },
+  {
+    "make": "Commodore",
+    "model": "64",
+    "memory": "64k",
+    "bits": "8",
+    "image": "assets/images/c64.png",
+    "yearsInProduction": "1982 - 1986",
+    "description": "The Commodore 64 was a bestselling, 8-bit home computer from the 1980s. It was created by Commodore International, and it entered the market in 1982. Around 17 million units are believed to have been sold.[5] The Commodore 64 is often credited with making personal computers popular amongst the masses. This quality sparked comparisons with the Ford Model T.[6][7] The Commodore 64 was offered at relatively low prices,[8] and was available in malls, department stores, and toy stores instead of solely in the shops of authorized dealers"
+  },
+  {
+    "make": "Commodore",
+    "model": "Amiga 500",
+    "memory": "512k - 4096k",
+    "bits": "16",
+    "image": "assets/images/amiga500.png",
+    "yearsInProduction": "1987 - 1992",
+    "description": "Amiga is a family of personal computers introduced by Commodore in 1985. The original model is one of a number of mid-1980s computers with 16- or 16/32-bit processors, 256 KB or more of RAM, mouse-based GUIs, and significantly improved graphics and audio compared to previous 8-bit systems."
+  },
+  {
+    "make": "Atari",
+    "model": "Mega STE",
+    "memory": "1mb - 8mb",
+    "bits": "16",
+    "image": "assets/images/mega-ste.png",
+    "yearsInProduction": "1991 - 1993",
+    "description": "The Atari Mega STE is Atari Corporation's final Motorola 68000-based personal computer in the Atari ST series and the second to last model overall. Released in 1991, the Mega STE is a late-model STE mounted in the case of an Atari TT computer. It was followed by the higher end Atari Falcon in 1992. 16/32-bit processors, 256 KB or more of RAM, mouse-based GUIs, and significantly improved graphics and audio compared to previous 8-bit systems."
+  },
+  {
+    "make": "Atari",
+    "model": "Falcon",
+    "memory": "1mb - 14mb",
+    "bits": "32",
+    "image": "assets/images/atari-falcon.png",
+    "yearsInProduction": "1992 - 1993",
+    "description": "The Atari Falcon030, released in 1992, was the final personal computer product from Atari Corporation. A high-end model of the Atari ST line, the machine is based on a Motorola 68030 CPU and a Motorola 56001 digital signal processor, a feature which distinguishes it from most other microcomputers of the era."
+  },
+  {
+    "make": "Acorn",
+    "model": "BBC Model B",
+    "memory": "32k",
+    "bits": "8",
+    "image": "assets/images/bbc-model-b.png",
+    "yearsInProduction": "1981 - 1994",
+    "description": "The British Broadcasting Corporation Microcomputer System, or BBC Micro, is a series of microcomputers and associated peripherals designed and built by Acorn Computers in the 1980s for the BBC Computer Literacy Project. Designed with an emphasis on education, it was notable for its ruggedness, expandability, and the quality of its operating system. An accompanying 1982 television series, The Computer Programme, featuring Chris Serle learning to use the machine, was broadcast on BBC2."
+  }
+]
