@@ -2,9 +2,9 @@
   <h1 class="navbar-brand">Retro Computer Museum</h1>
 </nav>
 <div class="topnav">
-  <a activeTab [activeComponent]="activeComponent" [currentTab]="'home'" href="/home">Home</a>
-  <a activeTab [activeComponent]="activeComponent" [currentTab]="'admin'" href="/admin">Admin</a>
-  <a activeTab [activeComponent]="activeComponent" [currentTab]="'about'" href="#about">About</a>
+  <a activeTab [activeComponent]="activeComponent" [currentTab]="'home'" href="/retro-computers/home">Home</a>
+  <a activeTab [activeComponent]="activeComponent" [currentTab]="'admin'" href="/retro-computers/admin">Admin</a>
+  <a activeTab [activeComponent]="activeComponent" [currentTab]="'about'" href="/retro-computers/about">About</a>
   <div>
     <form #searchForm="ngForm">
       <button class='btn btn-primary' [disabled]="!searchForm.form.valid" (click)="performSearch()">search</button>
