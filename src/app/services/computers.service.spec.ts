@@ -1,45 +1,38 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-
-import {SearchResultsComponent} from './search-results.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {RouterTestingModule} from "@angular/router/testing";
-import {HeaderComponent} from "../header/header.component";
-import {FormsModule} from "@angular/forms";
-import {ActiveTabDirective} from "../header/active-tab.directive";
-import {IComputer} from "../../domain/IComputer";
+import {ComputersService} from "./computers.service";
+import {TestBed} from "@angular/core/testing";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {of} from "rxjs";
 
-describe('SearchResultsComponent', () => {
-  let component: SearchResultsComponent;
-  let fixture: ComponentFixture<SearchResultsComponent>;
+describe('Computer service test', () => {
+
+  let computerService: ComputersService;
+
 
   beforeEach(async () => {
+
     await TestBed.configureTestingModule({
-      declarations: [SearchResultsComponent, HeaderComponent, ActiveTabDirective],
-      imports: [HttpClientModule, RouterTestingModule, FormsModule]
+      imports: [HttpClientModule]
     })
-      .compileComponents();
+  })
 
-    fixture = TestBed.createComponent(SearchResultsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should be able to do a search by make', async () => {
-    const mockData = getMockData();
+  it('should ', async () => {
     const httpSpy = TestBed.inject(HttpClient);
+    const mockData = getMockData();
     spyOn(httpSpy, 'get').and.returnValue(of(mockData))
-    await component.doSearch("Commodore");
-    const computers: IComputer[] = component.computerResults!!;
-    expect(computers.length).toEqual(1);
-    expect(computers[0].make).toEqual("Commodore")
-  });
+    computerService = new ComputersService(httpSpy);
 
-});
+    computerService.getComputers().subscribe(
+      {
+        next: computers => {
+          expect(computers[0].make).toEqual("Commodore")
+        }
+      });
+  })
+
+
+})
+
 
 const getMockData = () => {
   return [{
